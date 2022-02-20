@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "nirvana_hello": {
+      "main": "src/nirvana_hello/main.mo",
+      "type": "motoko"
+    },
+    "nirvana_hello_assets": {
+      "dependencies": [
+        "nirvana_hello"
+      ],
+      "frontend": {
+        "entrypoint": "src/nirvana_hello_assets/src/index.html"
+      },
+      "source": [
+        "src/nirvana_hello_assets/assets",
+        "dist/nirvana_hello_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
